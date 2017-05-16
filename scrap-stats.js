@@ -1,5 +1,6 @@
 const cheerio = require('cheerio');
 const fs = require('fs');
+const path = require('path');
 const rp = require('request-promise');
 
 rp({uri: 'http://lesherbonautes.mnhn.fr/stats', transform: body => cheerio.load(body)}).then($ => {
@@ -15,5 +16,5 @@ rp({uri: 'http://lesherbonautes.mnhn.fr/stats', transform: body => cheerio.load(
     json[items[i]] = counts[i].replace(/\s/g, '');
   }
 
-  fs.writeFileSync('herbo-stats.json', JSON.stringify(json));
+  fs.writeFileSync(process.argv[2] ? process.argv[2] : 'herbo-stats.json', JSON.stringify(json));
 });

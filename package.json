@@ -1,8 +1,4 @@
 {
-  "scripts": {
-    "explore-all": "node explore-all.js 0 1",
-    "scrap": "node scrap-stats.js"
-  },
   "dependencies": {
     "cheerio": "^0.22.0",
     "lodash": "^4.17.4",
