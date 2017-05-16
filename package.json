@@ -1,0 +1,14 @@
+{
+  "scripts": {
+    "explore-all": "node explore-all.js 0 1",
+    "scrap": "node scrap-stats.js"
+  },
+  "dependencies": {
+    "cheerio": "^0.22.0",
+    "lodash": "^4.17.4",
+    "node-rest-client-promise": "^2.0.0",
+    "promise-limit": "^2.4.0",
+    "request": "^2.81.0",
+    "request-promise": "^4.2.1"
+  }
+}
